@@ -1,5 +1,5 @@
 log/
-diffusion_render/
+diffusion_renderer/
 hf_cache/
 output/
 LightSwitch/

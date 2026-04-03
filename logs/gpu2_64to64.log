@@ -292,3 +292,17 @@ Skipping the post-processing step due to the error above. You can still use SAM 
 frame loading (JPEG):  78%|███████▊  | 50/64 [00:01<00:00, 45.82it/s][A
 frame loading (JPEG):  86%|████████▌ | 55/64 [00:01<00:00, 45.97it/s][A
 frame loading (JPEG):  94%|█████████▍| 60/64 [00:01<00:00, 45.59it/s][Aframe loading (JPEG): 100%|██████████| 64/64 [00:01<00:00, 45.67it/s]
+Evaluating:   0%|          | 19/7248 [1:36:54<586:11:44, 291.92s/it, PSNR=14.78, SPSNR=19.26, SSIM=0.55, LPIPS=0.51]Evaluating:   0%|          | 20/7248 [1:36:54<588:31:29, 293.12s/it, PSNR=14.78, SPSNR=19.26, SSIM=0.55, LPIPS=0.51]
+frame loading (JPEG):   0%|          | 0/64 [00:00<?, ?it/s][A
+frame loading (JPEG):   8%|▊         | 5/64 [00:00<00:01, 44.32it/s][A
+frame loading (JPEG):  16%|█▌        | 10/64 [00:00<00:01, 44.85it/s][A
+frame loading (JPEG):  23%|██▎       | 15/64 [00:00<00:01, 44.96it/s][A
+frame loading (JPEG):  31%|███▏      | 20/64 [00:00<00:00, 44.80it/s][A
+frame loading (JPEG):  39%|███▉      | 25/64 [00:00<00:00, 43.84it/s][A
+frame loading (JPEG):  47%|████▋     | 30/64 [00:00<00:00, 43.34it/s][A
+frame loading (JPEG):  55%|█████▍    | 35/64 [00:00<00:00, 42.99it/s][A
+frame loading (JPEG):  62%|██████▎   | 40/64 [00:00<00:00, 42.81it/s][A
+frame loading (JPEG):  70%|███████   | 45/64 [00:01<00:00, 42.63it/s][A
+frame loading (JPEG):  78%|███████▊  | 50/64 [00:01<00:00, 42.45it/s][A
+frame loading (JPEG):  86%|████████▌ | 55/64 [00:01<00:00, 42.40it/s][A
+frame loading (JPEG):  94%|█████████▍| 60/64 [00:01<00:00, 42.73it/s][Aframe loading (JPEG): 100%|██████████| 64/64 [00:01<00:00, 43.21it/s]

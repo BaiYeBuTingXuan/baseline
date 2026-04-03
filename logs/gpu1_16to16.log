@@ -407,3 +407,18 @@ Skipping the post-processing step due to the error above. You can still use SAM 
 frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 38.46it/s][A
 frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 42.42it/s][A
 frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 43.97it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.44it/s]
+Evaluating:   1%|          | 79/7248 [1:36:14<144:14:04, 72.43s/it, PSNR=17.18, SPSNR=22.49, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 80/7248 [1:36:14<144:19:46, 72.49s/it, PSNR=17.18, SPSNR=22.49, SSIM=0.69, LPIPS=0.35]
+frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
+frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 37.83it/s][A
+frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 40.72it/s][A
+frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 41.83it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.53it/s]
+Evaluating:   1%|          | 80/7248 [1:37:26<144:19:46, 72.49s/it, PSNR=17.24, SPSNR=22.49, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 81/7248 [1:37:26<144:11:36, 72.43s/it, PSNR=17.24, SPSNR=22.49, SSIM=0.69, LPIPS=0.35]
+frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
+frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.56it/s][A
+frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.97it/s][A
+frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.61it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.43it/s]
+Evaluating:   1%|          | 81/7248 [1:38:38<144:11:36, 72.43s/it, PSNR=17.20, SPSNR=22.39, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 82/7248 [1:38:38<143:48:30, 72.25s/it, PSNR=17.20, SPSNR=22.39, SSIM=0.69, LPIPS=0.35]
+frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
+frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 45.15it/s][A
+frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 45.54it/s][A
+frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.56it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.48it/s]
