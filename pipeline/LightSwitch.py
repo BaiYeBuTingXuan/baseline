@@ -9,7 +9,7 @@ from pipeline import BaselinePipeline
 
 from LightSwitch.produce_gs_relightings import *
 from LightSwitch.dataset_colmap import *
-from sam2.build_sam import build_sam2_video_predictor
+from .segment import segment_images, sam_init
 
 env_transform = transforms.Compose([
         transforms.ToTensor(),
@@ -66,10 +66,8 @@ class LightSwitchPipeline(BaselinePipeline):
             trust_remote_code=True
         ).to(self.device)
 
-        self.sam = build_sam2_video_predictor(
-            "configs/sam2.1/sam2.1_hiera_l.yaml",
-            "/media/SSD/hejun/baselines/LightSwitch/SAM2/checkpoints/sam2.1_hiera_large.pt",
-            self.device
+        self.sam = sam_init(
+            "sam/sam_vit_h_4b8939.pth",
         )
 
     def inverse_process(self, input_image, pose, mask, num_inference_loops=1, num_inference_steps=35):
@@ -252,6 +250,7 @@ class LightSwitchPipeline(BaselinePipeline):
 
     def __call__(self, batch):
         # Preprocess
+        real_frame_size = batch["source_images"].size()[1]
         batch = self.batch_preprocess(batch)
 
         # Move to device and dtype
@@ -279,7 +278,7 @@ class LightSwitchPipeline(BaselinePipeline):
         # 4. Reshape to [B, F, C, H, W]
         # batch_size is the original B, num_views is F (usually 16)
         _, C, H, W = relit_images.shape
-        final_output = relit_images.reshape(1, -1, C, H, W)
+        final_output = relit_images.reshape(1, -1, C, H, W)[:,:real_frame_size, ...]
 
         return final_output
 
@@ -295,8 +294,11 @@ class LightSwitchPipeline(BaselinePipeline):
         
         # 1. Standard Tensors [B, V, C, H, W] -> [B*V, C, H, W]
         # Note that mask is not the input!
-        res["mask"] = segment_tensor(self.sam, batch["source_images"]).to(self.device, dtype=self.weight_dtype).flatten(0, 1)
-        res["image"] = batch["source_images"].to(self.device, dtype=self.weight_dtype).flatten(0, 1)
+        masked_image, mask = segment_images(self.sam, batch["source_images"], target_size=512)
+
+        res["mask"] = mask.to(self.device, dtype=self.weight_dtype).flatten(0, 1)
+        res["image"] = masked_image.to(self.device, dtype=self.weight_dtype).flatten(0, 1)
+
         res["image"] = 2.0 * res["image"] - 1.0
         
         # 2. Camera & Pose Extraction (NumPy for trig/math)
@@ -353,8 +355,31 @@ class LightSwitchPipeline(BaselinePipeline):
         dir_embeds =  torch.tensor(generate_directional_embeddings(), dtype=torch.float32).permute(2, 0, 1)
         res["dir_embeds"] = dir_embeds.unsqueeze(0).repeat(total_elements, 1, 1, 1).to(self.device, dtype=self.weight_dtype)
 
+        if total_elements == 1: # Light Switch want input to be 16
+            for k, v in res.items():
+                res[k] = torch.cat([v]*16, dim=0)
         return res
-        
+
+def expand_batch_to_16(tensor: torch.Tensor, dim: int = 0) -> torch.Tensor:
+    """
+    Expand a tensor with batch_size=1 to batch_size=16 by repeating.
+    
+    Args:
+        tensor: Input tensor, e.g., [1, F, C, H, W] or [1, C, H, W]
+        dim: The batch dimension to expand (default: 0)
+    
+    Returns:
+        Tensor with size 16 along the specified dimension
+    """
+    if tensor.size(dim) == 1:
+        # Repeat 16 times along the batch dimension
+        repeat_factors = [1] * tensor.ndim
+        repeat_factors[dim] = 16
+        return tensor.repeat(*repeat_factors)
+    elif tensor.size(dim) == 16:
+        return tensor  # Already correct size
+    else:
+        raise ValueError(f"Expected batch size 1 or 16 at dim {dim}, got {tensor.size(dim)}")
     
 def calculate_fov_from_k(K, shape):
     """
@@ -409,102 +434,3 @@ def get_spherical_pose(T_w2c):
     phi = torch.atan2(y, x)
     
     return torch.stack([theta, torch.sin(phi), torch.cos(phi), r], dim=-1)
-
-
-@torch.no_grad()
-def segment_tensor(predictor, video_tensor):
-    """
-    Automatically segments objects in a video tensor.
-    Uses a temporary directory to save frames as JPEGs to satisfy SAM 2's strict input requirements.
-    
-    Args:
-        predictor: The SAM 2 Video Predictor instance.
-        video_tensor (torch.Tensor): Shape (B, F, C, H, W), RGB, range [0, 1] or [0, 255].
-        
-    Returns:
-        torch.Tensor: Binary masks of shape (B, F, 1, H, W), type float32 (0.0 or 1.0).
-    """
-    batch_size, num_frames, _, h, w = video_tensor.shape
-    device = video_tensor.device
-    all_batch_masks = []
-
-    for b in range(batch_size):
-        # Create an automatic temporary directory
-        with tempfile.TemporaryDirectory() as temp_dir:
-            
-            # 1. Save tensor frames as JPEGs to the temporary folder
-            for f in range(num_frames):
-                # Convert (C, H, W) -> (H, W, C)
-                frame = video_tensor[b, f].permute(1, 2, 0).cpu().float().numpy()
-                
-                # Normalize to 0-255 uint8
-                if frame.max() <= 1.01: 
-                    frame = (frame * 255).astype(np.uint8)
-                else:
-                    frame = frame.astype(np.uint8)
-                
-                # Save as sequential JPEGs (SAM 2 requires names like 00000.jpg)
-                img = PIL.Image.fromarray(frame)
-                img_path = os.path.join(temp_dir, f"{f:05d}.jpg")
-                img.save(img_path, format="JPEG")
-
-            # 2. Initialize the inference state using the temporary directory path
-            inference_state = predictor.init_state(video_path=temp_dir)
-
-            # 3. Automatic Prompt Generation (First Frame)
-            # We use the tensor directly in memory to find the center, avoiding reloading the JPEG
-            first_frame_pixels = video_tensor[b, 0].to(device).float()
-            intensity_map = first_frame_pixels.sum(dim=0) # Shape: (H, W)
-            non_zero_indices = torch.nonzero(intensity_map > 0)
-
-            if len(non_zero_indices) == 0:
-                all_batch_masks.append(torch.zeros((num_frames, 1, h, w), device=device))
-                predictor.reset_state(inference_state)
-                continue
-
-            # Calculate the geometric center (Y, X) -> SAM expects (X, Y)
-            center_y, center_x = non_zero_indices.float().mean(dim=0).cpu().numpy()
-            prompt_points = np.array([[center_x, center_y]], dtype=np.float32)
-            prompt_labels = np.array([1], dtype=np.int32) # 1 = Positive click
-
-            # 4. Add the initial point prompt
-            predictor.add_new_points_or_box(
-                inference_state=inference_state,
-                frame_idx=0,
-                obj_id=1,
-                points=prompt_points,
-                labels=prompt_labels,
-            )
-
-            # 5. Propagate the mask across all frames
-            video_segments = {}
-            with silence_tqdm():
-                for frame_idx, out_obj_ids, out_mask_logits in predictor.propagate_in_video(inference_state):
-                    mask = (out_mask_logits[0] > 0.0).float() 
-                    video_segments[frame_idx] = mask
-
-            # 6. Collate the masks
-            current_video_masks = torch.stack([video_segments[f] for f in range(num_frames)])
-            all_batch_masks.append(current_video_masks)
-            
-            # 7. Clear GPU memory
-            predictor.reset_state(inference_state)
-            
-        # The 'with' block ends here, and tempfile automatically deletes the temp_dir and its JPEGs.
-
-    return torch.stack(all_batch_masks)
-
-import contextlib
-from tqdm import tqdm
-
-@contextlib.contextmanager
-def silence_tqdm():
-    # Store the original __init__
-    old_init = tqdm.__init__
-    # Override it to always set disable=True
-    tqdm.__init__ = lambda self, *args, **kwargs: old_init(self, *args, **kwargs, disable=True)
-    try:
-        yield
-    finally:
-        # Restore the original __init__ so other bars still work later
-        tqdm.__init__ = old_init

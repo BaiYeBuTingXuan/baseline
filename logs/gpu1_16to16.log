@@ -1,424 +1,3 @@
 Keyword arguments {'trust_remote_code': True} are not expected by StableMaterialPipelineMV and will be ignored.
-Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:00,  6.85it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00,  6.19it/s]Loading pipeline components...:  67%|██████▋   | 4/6 [00:00<00:00,  6.81it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  8.85it/s]
-INFO:root:Loaded checkpoint sucessfully
-Evaluating:   0%|          | 0/7248 [00:00<?, ?it/s]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 36.67it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 39.83it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 40.56it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 40.26it/s]
-/media/SSD/hejun/baselines/LightSwitch/SAM2/sam2/sam2_video_predictor.py:786: UserWarning: cannot import name '_C' from 'sam2' (/media/SSD/hejun/baselines/LightSwitch/SAM2/sam2/__init__.py)
-
-Skipping the post-processing step due to the error above. You can still use SAM 2 and it's OK to ignore the error above, although some post-processing functionality may be limited (which doesn't affect the results in most cases; see https://github.com/facebookresearch/sam2/blob/main/INSTALL.md).
-  pred_masks_gpu = fill_holes_in_mask_scores(
-Evaluating:   0%|          | 0/7248 [01:14<?, ?it/s, PSNR=11.94, SPSNR=11.97, SSIM=0.64, LPIPS=0.53]Evaluating:   0%|          | 1/7248 [01:14<150:50:34, 74.93s/it, PSNR=11.94, SPSNR=11.97, SSIM=0.64, LPIPS=0.53]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 37.94it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 40.97it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 42.21it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.90it/s]
-Evaluating:   0%|          | 1/7248 [02:26<150:50:34, 74.93s/it, PSNR=11.87, SPSNR=11.89, SSIM=0.64, LPIPS=0.54]Evaluating:   0%|          | 2/7248 [02:26<146:33:24, 72.81s/it, PSNR=11.87, SPSNR=11.89, SSIM=0.64, LPIPS=0.54]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.48it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 42.78it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 42.95it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.74it/s]
-Evaluating:   0%|          | 2/7248 [03:38<146:33:24, 72.81s/it, PSNR=12.76, SPSNR=13.66, SSIM=0.63, LPIPS=0.48]Evaluating:   0%|          | 3/7248 [03:38<146:07:59, 72.61s/it, PSNR=12.76, SPSNR=13.66, SSIM=0.63, LPIPS=0.48]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 35.78it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 40.25it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 41.18it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 40.77it/s]
-Evaluating:   0%|          | 3/7248 [04:50<146:07:59, 72.61s/it, PSNR=13.71, SPSNR=14.43, SSIM=0.64, LPIPS=0.47]Evaluating:   0%|          | 4/7248 [04:50<145:28:40, 72.30s/it, PSNR=13.71, SPSNR=14.43, SSIM=0.64, LPIPS=0.47]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.29it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.10it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.45it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.08it/s]
-Evaluating:   0%|          | 4/7248 [06:02<145:28:40, 72.30s/it, PSNR=13.92, SPSNR=14.50, SSIM=0.65, LPIPS=0.48]Evaluating:   0%|          | 5/7248 [06:02<145:07:16, 72.13s/it, PSNR=13.92, SPSNR=14.50, SSIM=0.65, LPIPS=0.48]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.93it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 39.81it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 40.17it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 40.31it/s]
-Evaluating:   0%|          | 5/7248 [07:14<145:07:16, 72.13s/it, PSNR=13.97, SPSNR=15.16, SSIM=0.65, LPIPS=0.46]Evaluating:   0%|          | 6/7248 [07:14<145:14:25, 72.20s/it, PSNR=13.97, SPSNR=15.16, SSIM=0.65, LPIPS=0.46]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 38.97it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 41.55it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 42.47it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.35it/s]
-Evaluating:   0%|          | 6/7248 [08:26<145:14:25, 72.20s/it, PSNR=14.31, SPSNR=15.37, SSIM=0.65, LPIPS=0.46]Evaluating:   0%|          | 7/7248 [08:26<144:56:27, 72.06s/it, PSNR=14.31, SPSNR=15.37, SSIM=0.65, LPIPS=0.46]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.57it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.27it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.87it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.68it/s]
-Evaluating:   0%|          | 7/7248 [09:38<144:56:27, 72.06s/it, PSNR=14.38, SPSNR=15.56, SSIM=0.66, LPIPS=0.45]Evaluating:   0%|          | 8/7248 [09:38<145:05:20, 72.14s/it, PSNR=14.38, SPSNR=15.56, SSIM=0.66, LPIPS=0.45]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.35it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.91it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.83it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.52it/s]
-Evaluating:   0%|          | 8/7248 [10:50<145:05:20, 72.14s/it, PSNR=14.36, SPSNR=15.70, SSIM=0.66, LPIPS=0.43]Evaluating:   0%|          | 9/7248 [10:50<145:04:22, 72.15s/it, PSNR=14.36, SPSNR=15.70, SSIM=0.66, LPIPS=0.43]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.06it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.68it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.65it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.25it/s]
-Evaluating:   0%|          | 9/7248 [12:02<145:04:22, 72.15s/it, PSNR=14.52, SPSNR=15.74, SSIM=0.66, LPIPS=0.44]Evaluating:   0%|          | 10/7248 [12:02<144:45:57, 72.00s/it, PSNR=14.52, SPSNR=15.74, SSIM=0.66, LPIPS=0.44]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.43it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.22it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.91it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.54it/s]
-Evaluating:   0%|          | 10/7248 [13:14<144:45:57, 72.00s/it, PSNR=14.64, SPSNR=15.75, SSIM=0.66, LPIPS=0.45]Evaluating:   0%|          | 11/7248 [13:14<144:35:17, 71.92s/it, PSNR=14.64, SPSNR=15.75, SSIM=0.66, LPIPS=0.45]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.65it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.27it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.33it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.88it/s]
-Evaluating:   0%|          | 11/7248 [14:26<144:35:17, 71.92s/it, PSNR=15.03, SPSNR=16.08, SSIM=0.65, LPIPS=0.46]Evaluating:   0%|          | 12/7248 [14:26<144:29:36, 71.89s/it, PSNR=15.03, SPSNR=16.08, SSIM=0.65, LPIPS=0.46]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 40.06it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 41.73it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 42.87it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.55it/s]
-Evaluating:   0%|          | 12/7248 [15:37<144:29:36, 71.89s/it, PSNR=15.04, SPSNR=16.05, SSIM=0.65, LPIPS=0.46]Evaluating:   0%|          | 13/7248 [15:37<144:25:56, 71.87s/it, PSNR=15.04, SPSNR=16.05, SSIM=0.65, LPIPS=0.46]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.11it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 40.74it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 41.52it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.37it/s]
-Evaluating:   0%|          | 13/7248 [16:49<144:25:56, 71.87s/it, PSNR=15.39, SPSNR=16.47, SSIM=0.66, LPIPS=0.46]Evaluating:   0%|          | 14/7248 [16:49<144:22:15, 71.85s/it, PSNR=15.39, SPSNR=16.47, SSIM=0.66, LPIPS=0.46]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.66it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.44it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.04it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.74it/s]
-Evaluating:   0%|          | 14/7248 [18:01<144:22:15, 71.85s/it, PSNR=15.30, SPSNR=16.31, SSIM=0.65, LPIPS=0.47]Evaluating:   0%|          | 15/7248 [18:01<144:14:04, 71.79s/it, PSNR=15.30, SPSNR=16.31, SSIM=0.65, LPIPS=0.47]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.53it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.20it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.89it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.69it/s]
-Evaluating:   0%|          | 15/7248 [19:13<144:14:04, 71.79s/it, PSNR=15.16, SPSNR=16.74, SSIM=0.65, LPIPS=0.46]Evaluating:   0%|          | 16/7248 [19:13<144:29:46, 71.93s/it, PSNR=15.16, SPSNR=16.74, SSIM=0.65, LPIPS=0.46]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.44it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.18it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.83it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.73it/s]
-Evaluating:   0%|          | 16/7248 [20:25<144:29:46, 71.93s/it, PSNR=15.59, SPSNR=17.18, SSIM=0.65, LPIPS=0.45]Evaluating:   0%|          | 17/7248 [20:25<144:22:27, 71.88s/it, PSNR=15.59, SPSNR=17.18, SSIM=0.65, LPIPS=0.45]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.59it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.10it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.77it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.50it/s]
-Evaluating:   0%|          | 17/7248 [21:37<144:22:27, 71.88s/it, PSNR=16.03, SPSNR=17.88, SSIM=0.65, LPIPS=0.44]Evaluating:   0%|          | 18/7248 [21:37<144:28:43, 71.94s/it, PSNR=16.03, SPSNR=17.88, SSIM=0.65, LPIPS=0.44]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.29it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.70it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.63it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.28it/s]
-Evaluating:   0%|          | 18/7248 [22:49<144:28:43, 71.94s/it, PSNR=16.24, SPSNR=18.27, SSIM=0.65, LPIPS=0.43]Evaluating:   0%|          | 19/7248 [22:49<144:26:47, 71.93s/it, PSNR=16.24, SPSNR=18.27, SSIM=0.65, LPIPS=0.43]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.78it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.65it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.56it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.23it/s]
-Evaluating:   0%|          | 19/7248 [24:01<144:26:47, 71.93s/it, PSNR=16.35, SPSNR=18.44, SSIM=0.64, LPIPS=0.43]Evaluating:   0%|          | 20/7248 [24:01<144:23:18, 71.91s/it, PSNR=16.35, SPSNR=18.44, SSIM=0.64, LPIPS=0.43]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.67it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.56it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.19it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.86it/s]
-Evaluating:   0%|          | 20/7248 [25:13<144:23:18, 71.91s/it, PSNR=16.60, SPSNR=18.58, SSIM=0.64, LPIPS=0.42]Evaluating:   0%|          | 21/7248 [25:13<144:17:16, 71.87s/it, PSNR=16.60, SPSNR=18.58, SSIM=0.64, LPIPS=0.42]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.76it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.42it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.95it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.64it/s]
-Evaluating:   0%|          | 21/7248 [26:25<144:17:16, 71.87s/it, PSNR=16.73, SPSNR=18.93, SSIM=0.64, LPIPS=0.42]Evaluating:   0%|          | 22/7248 [26:25<144:25:32, 71.95s/it, PSNR=16.73, SPSNR=18.93, SSIM=0.64, LPIPS=0.42]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.93it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.29it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.38it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.41it/s]
-Evaluating:   0%|          | 22/7248 [27:36<144:25:32, 71.95s/it, PSNR=16.95, SPSNR=19.05, SSIM=0.64, LPIPS=0.42]Evaluating:   0%|          | 23/7248 [27:36<144:15:55, 71.88s/it, PSNR=16.95, SPSNR=19.05, SSIM=0.64, LPIPS=0.42]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 39.75it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 43.21it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 44.28it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.90it/s]
-Evaluating:   0%|          | 23/7248 [28:48<144:15:55, 71.88s/it, PSNR=17.13, SPSNR=19.15, SSIM=0.63, LPIPS=0.42]Evaluating:   0%|          | 24/7248 [28:48<144:10:40, 71.85s/it, PSNR=17.13, SPSNR=19.15, SSIM=0.63, LPIPS=0.42]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.95it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.39it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.14it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.83it/s]
-Evaluating:   0%|          | 24/7248 [30:00<144:10:40, 71.85s/it, PSNR=17.32, SPSNR=19.27, SSIM=0.63, LPIPS=0.42]Evaluating:   0%|          | 25/7248 [30:00<144:04:49, 71.81s/it, PSNR=17.32, SPSNR=19.27, SSIM=0.63, LPIPS=0.42]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 39.60it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 42.94it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 42.97it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.83it/s]
-Evaluating:   0%|          | 25/7248 [31:12<144:04:49, 71.81s/it, PSNR=17.47, SPSNR=19.52, SSIM=0.63, LPIPS=0.41]Evaluating:   0%|          | 26/7248 [31:12<144:10:57, 71.87s/it, PSNR=17.47, SPSNR=19.52, SSIM=0.63, LPIPS=0.41]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.34it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.84it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.29it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.01it/s]
-Evaluating:   0%|          | 26/7248 [32:24<144:10:57, 71.87s/it, PSNR=17.47, SPSNR=19.57, SSIM=0.63, LPIPS=0.41]Evaluating:   0%|          | 27/7248 [32:24<144:11:51, 71.89s/it, PSNR=17.47, SPSNR=19.57, SSIM=0.63, LPIPS=0.41]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.51it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.94it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.60it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.28it/s]
-Evaluating:   0%|          | 27/7248 [33:36<144:11:51, 71.89s/it, PSNR=17.71, SPSNR=19.86, SSIM=0.63, LPIPS=0.40]Evaluating:   0%|          | 28/7248 [33:36<144:11:05, 71.89s/it, PSNR=17.71, SPSNR=19.86, SSIM=0.63, LPIPS=0.40]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.52it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.58it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.29it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.04it/s]
-Evaluating:   0%|          | 28/7248 [34:48<144:11:05, 71.89s/it, PSNR=17.74, SPSNR=19.97, SSIM=0.63, LPIPS=0.40]Evaluating:   0%|          | 29/7248 [34:48<144:16:55, 71.95s/it, PSNR=17.74, SPSNR=19.97, SSIM=0.63, LPIPS=0.40]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.77it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 42.08it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 42.69it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.61it/s]
-Evaluating:   0%|          | 29/7248 [36:00<144:16:55, 71.95s/it, PSNR=17.82, SPSNR=20.01, SSIM=0.63, LPIPS=0.40]Evaluating:   0%|          | 30/7248 [36:00<144:13:08, 71.93s/it, PSNR=17.82, SPSNR=20.01, SSIM=0.63, LPIPS=0.40]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.37it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.66it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.31it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.93it/s]
-Evaluating:   0%|          | 30/7248 [37:12<144:13:08, 71.93s/it, PSNR=17.95, SPSNR=20.22, SSIM=0.63, LPIPS=0.39]Evaluating:   0%|          | 31/7248 [37:12<144:15:36, 71.96s/it, PSNR=17.95, SPSNR=20.22, SSIM=0.63, LPIPS=0.39]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.59it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 45.34it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.76it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.01it/s]
-Evaluating:   0%|          | 31/7248 [38:24<144:15:36, 71.96s/it, PSNR=17.97, SPSNR=20.25, SSIM=0.63, LPIPS=0.39]Evaluating:   0%|          | 32/7248 [38:24<144:12:43, 71.95s/it, PSNR=17.97, SPSNR=20.25, SSIM=0.63, LPIPS=0.39]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.59it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.85it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.19it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.32it/s]
-Evaluating:   0%|          | 32/7248 [39:36<144:12:43, 71.95s/it, PSNR=17.88, SPSNR=20.32, SSIM=0.63, LPIPS=0.39]Evaluating:   0%|          | 33/7248 [39:36<144:30:31, 72.10s/it, PSNR=17.88, SPSNR=20.32, SSIM=0.63, LPIPS=0.39]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 39.40it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 42.90it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 43.96it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.34it/s]
-Evaluating:   0%|          | 33/7248 [40:49<144:30:31, 72.10s/it, PSNR=17.85, SPSNR=20.48, SSIM=0.63, LPIPS=0.39]Evaluating:   0%|          | 34/7248 [40:49<144:45:32, 72.24s/it, PSNR=17.85, SPSNR=20.48, SSIM=0.63, LPIPS=0.39]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.19it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.61it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.18it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.90it/s]
-Evaluating:   0%|          | 34/7248 [42:01<144:45:32, 72.24s/it, PSNR=17.75, SPSNR=20.53, SSIM=0.64, LPIPS=0.38]Evaluating:   0%|          | 35/7248 [42:01<144:53:15, 72.31s/it, PSNR=17.75, SPSNR=20.53, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 44.40it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.51it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.02it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.16it/s]
-Evaluating:   0%|          | 35/7248 [43:14<144:53:15, 72.31s/it, PSNR=17.68, SPSNR=20.65, SSIM=0.64, LPIPS=0.38]Evaluating:   0%|          | 36/7248 [43:14<144:54:43, 72.34s/it, PSNR=17.68, SPSNR=20.65, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.61it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.43it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.12it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.94it/s]
-Evaluating:   0%|          | 36/7248 [44:26<144:54:43, 72.34s/it, PSNR=17.55, SPSNR=20.76, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 37/7248 [44:26<145:06:57, 72.45s/it, PSNR=17.55, SPSNR=20.76, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.87it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.93it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.26it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.10it/s]
-Evaluating:   1%|          | 37/7248 [45:38<145:06:57, 72.45s/it, PSNR=17.54, SPSNR=20.67, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 38/7248 [45:38<144:43:42, 72.26s/it, PSNR=17.54, SPSNR=20.67, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 44.16it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.75it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.90it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.76it/s]
-Evaluating:   1%|          | 38/7248 [46:51<144:43:42, 72.26s/it, PSNR=17.42, SPSNR=20.84, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 39/7248 [46:51<145:02:58, 72.43s/it, PSNR=17.42, SPSNR=20.84, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.28it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.52it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.21it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.28it/s]
-Evaluating:   1%|          | 39/7248 [48:03<145:02:58, 72.43s/it, PSNR=17.49, SPSNR=20.83, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 40/7248 [48:03<144:39:14, 72.25s/it, PSNR=17.49, SPSNR=20.83, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.78it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.58it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.57it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.39it/s]
-Evaluating:   1%|          | 40/7248 [49:15<144:39:14, 72.25s/it, PSNR=17.60, SPSNR=20.87, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 41/7248 [49:15<144:21:07, 72.11s/it, PSNR=17.60, SPSNR=20.87, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.65it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.15it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.47it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.48it/s]
-Evaluating:   1%|          | 41/7248 [50:27<144:21:07, 72.11s/it, PSNR=17.55, SPSNR=20.97, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 42/7248 [50:27<144:41:40, 72.29s/it, PSNR=17.55, SPSNR=20.97, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 38.79it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 40.34it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 41.11it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 40.85it/s]
-Evaluating:   1%|          | 42/7248 [51:40<144:41:40, 72.29s/it, PSNR=17.47, SPSNR=21.01, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 43/7248 [51:40<144:57:29, 72.43s/it, PSNR=17.47, SPSNR=21.01, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 38.39it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 41.04it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 42.85it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.57it/s]
-Evaluating:   1%|          | 43/7248 [52:52<144:57:29, 72.43s/it, PSNR=17.43, SPSNR=21.07, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 44/7248 [52:52<144:57:45, 72.44s/it, PSNR=17.43, SPSNR=21.07, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.69it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.75it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.61it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.20it/s]
-Evaluating:   1%|          | 44/7248 [54:04<144:57:45, 72.44s/it, PSNR=17.46, SPSNR=21.04, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 45/7248 [54:04<144:35:20, 72.26s/it, PSNR=17.46, SPSNR=21.04, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 38.39it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 42.31it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 43.33it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.96it/s]
-Evaluating:   1%|          | 45/7248 [55:17<144:35:20, 72.26s/it, PSNR=17.38, SPSNR=21.19, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 46/7248 [55:17<144:44:25, 72.35s/it, PSNR=17.38, SPSNR=21.19, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 37.30it/s][A
-frame loading (JPEG):  50%|█████     | 8/16 [00:00<00:00, 38.34it/s][A
-frame loading (JPEG):  75%|███████▌  | 12/16 [00:00<00:00, 38.03it/s][A
-frame loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 37.87it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 37.88it/s]
-Evaluating:   1%|          | 46/7248 [56:29<144:44:25, 72.35s/it, PSNR=17.42, SPSNR=21.28, SSIM=0.64, LPIPS=0.38]Evaluating:   1%|          | 47/7248 [56:29<144:47:29, 72.39s/it, PSNR=17.42, SPSNR=21.28, SSIM=0.64, LPIPS=0.38]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 44.68it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 45.37it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.72it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.56it/s]
-Evaluating:   1%|          | 47/7248 [57:42<144:47:29, 72.39s/it, PSNR=17.35, SPSNR=21.25, SSIM=0.64, LPIPS=0.37]Evaluating:   1%|          | 48/7248 [57:42<144:47:28, 72.40s/it, PSNR=17.35, SPSNR=21.25, SSIM=0.64, LPIPS=0.37]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 36.61it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 39.09it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 40.23it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 40.02it/s]
-Evaluating:   1%|          | 48/7248 [58:54<144:47:28, 72.40s/it, PSNR=17.43, SPSNR=21.26, SSIM=0.65, LPIPS=0.37]Evaluating:   1%|          | 49/7248 [58:54<144:33:45, 72.29s/it, PSNR=17.43, SPSNR=21.26, SSIM=0.65, LPIPS=0.37]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.53it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.76it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.20it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.98it/s]
-Evaluating:   1%|          | 49/7248 [1:00:06<144:33:45, 72.29s/it, PSNR=17.48, SPSNR=21.37, SSIM=0.65, LPIPS=0.37]Evaluating:   1%|          | 50/7248 [1:00:06<144:22:16, 72.21s/it, PSNR=17.48, SPSNR=21.37, SSIM=0.65, LPIPS=0.37]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.29it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 42.38it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 42.53it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.45it/s]
-Evaluating:   1%|          | 50/7248 [1:01:18<144:22:16, 72.21s/it, PSNR=17.45, SPSNR=21.46, SSIM=0.66, LPIPS=0.36]Evaluating:   1%|          | 51/7248 [1:01:18<144:16:28, 72.17s/it, PSNR=17.45, SPSNR=21.46, SSIM=0.66, LPIPS=0.36]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.12it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.16it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.31it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.91it/s]
-Evaluating:   1%|          | 51/7248 [1:02:30<144:16:28, 72.17s/it, PSNR=17.46, SPSNR=21.64, SSIM=0.66, LPIPS=0.36]Evaluating:   1%|          | 52/7248 [1:02:30<144:14:14, 72.16s/it, PSNR=17.46, SPSNR=21.64, SSIM=0.66, LPIPS=0.36]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.64it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.27it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.60it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.39it/s]
-Evaluating:   1%|          | 52/7248 [1:03:42<144:14:14, 72.16s/it, PSNR=17.47, SPSNR=21.84, SSIM=0.66, LPIPS=0.36]Evaluating:   1%|          | 53/7248 [1:03:42<144:12:44, 72.16s/it, PSNR=17.47, SPSNR=21.84, SSIM=0.66, LPIPS=0.36]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.48it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 42.36it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 42.92it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.70it/s]
-Evaluating:   1%|          | 53/7248 [1:04:54<144:12:44, 72.16s/it, PSNR=17.42, SPSNR=21.94, SSIM=0.67, LPIPS=0.35]Evaluating:   1%|          | 54/7248 [1:04:54<144:10:40, 72.15s/it, PSNR=17.42, SPSNR=21.94, SSIM=0.67, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.30it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 42.31it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 41.98it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.86it/s]
-Evaluating:   1%|          | 54/7248 [1:06:06<144:10:40, 72.15s/it, PSNR=17.58, SPSNR=22.03, SSIM=0.67, LPIPS=0.35]Evaluating:   1%|          | 55/7248 [1:06:06<143:57:00, 72.05s/it, PSNR=17.58, SPSNR=22.03, SSIM=0.67, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 39.56it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 43.24it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 44.40it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.56it/s]
-Evaluating:   1%|          | 55/7248 [1:07:18<143:57:00, 72.05s/it, PSNR=17.58, SPSNR=22.33, SSIM=0.67, LPIPS=0.35]Evaluating:   1%|          | 56/7248 [1:07:18<144:00:06, 72.08s/it, PSNR=17.58, SPSNR=22.33, SSIM=0.67, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 44.78it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 45.03it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.66it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.50it/s]
-Evaluating:   1%|          | 56/7248 [1:08:30<144:00:06, 72.08s/it, PSNR=17.61, SPSNR=22.50, SSIM=0.68, LPIPS=0.35]Evaluating:   1%|          | 57/7248 [1:08:30<143:56:14, 72.06s/it, PSNR=17.61, SPSNR=22.50, SSIM=0.68, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.76it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.03it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 42.90it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.88it/s]
-Evaluating:   1%|          | 57/7248 [1:09:42<143:56:14, 72.06s/it, PSNR=17.70, SPSNR=22.52, SSIM=0.68, LPIPS=0.35]Evaluating:   1%|          | 58/7248 [1:09:42<143:46:47, 71.99s/it, PSNR=17.70, SPSNR=22.52, SSIM=0.68, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 36.70it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 39.71it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 41.29it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 40.82it/s]
-Evaluating:   1%|          | 58/7248 [1:10:54<143:46:47, 71.99s/it, PSNR=17.71, SPSNR=22.57, SSIM=0.68, LPIPS=0.34]Evaluating:   1%|          | 59/7248 [1:10:54<143:52:52, 72.05s/it, PSNR=17.71, SPSNR=22.57, SSIM=0.68, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 35.58it/s][A
-frame loading (JPEG):  50%|█████     | 8/16 [00:00<00:00, 36.36it/s][A
-frame loading (JPEG):  75%|███████▌  | 12/16 [00:00<00:00, 37.64it/s][A
-frame loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 37.67it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 37.30it/s]
-Evaluating:   1%|          | 59/7248 [1:12:06<143:52:52, 72.05s/it, PSNR=17.71, SPSNR=22.69, SSIM=0.69, LPIPS=0.34]Evaluating:   1%|          | 60/7248 [1:12:06<143:55:42, 72.08s/it, PSNR=17.71, SPSNR=22.69, SSIM=0.69, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.27it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.67it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.12it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.84it/s]
-Evaluating:   1%|          | 60/7248 [1:13:19<143:55:42, 72.08s/it, PSNR=17.70, SPSNR=22.81, SSIM=0.69, LPIPS=0.34]Evaluating:   1%|          | 61/7248 [1:13:19<144:01:20, 72.14s/it, PSNR=17.70, SPSNR=22.81, SSIM=0.69, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.92it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.27it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.27it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.19it/s]
-Evaluating:   1%|          | 61/7248 [1:14:31<144:01:20, 72.14s/it, PSNR=17.70, SPSNR=22.94, SSIM=0.69, LPIPS=0.34]Evaluating:   1%|          | 62/7248 [1:14:31<144:06:00, 72.19s/it, PSNR=17.70, SPSNR=22.94, SSIM=0.69, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 38.57it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 41.90it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 42.50it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.10it/s]
-Evaluating:   1%|          | 62/7248 [1:15:43<144:06:00, 72.19s/it, PSNR=17.71, SPSNR=23.01, SSIM=0.69, LPIPS=0.33]Evaluating:   1%|          | 63/7248 [1:15:43<144:06:49, 72.21s/it, PSNR=17.71, SPSNR=23.01, SSIM=0.69, LPIPS=0.33]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.00it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.60it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.10it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.83it/s]
-Evaluating:   1%|          | 63/7248 [1:16:56<144:06:49, 72.21s/it, PSNR=17.65, SPSNR=23.04, SSIM=0.70, LPIPS=0.33]Evaluating:   1%|          | 64/7248 [1:16:56<144:06:55, 72.22s/it, PSNR=17.65, SPSNR=23.04, SSIM=0.70, LPIPS=0.33]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 38.07it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 40.26it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 41.27it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.08it/s]
-Evaluating:   1%|          | 64/7248 [1:18:07<144:06:55, 72.22s/it, PSNR=17.65, SPSNR=22.96, SSIM=0.69, LPIPS=0.34]Evaluating:   1%|          | 65/7248 [1:18:07<143:52:04, 72.10s/it, PSNR=17.65, SPSNR=22.96, SSIM=0.69, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 39.78it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 41.58it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 40.52it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 40.51it/s]
-Evaluating:   1%|          | 65/7248 [1:19:20<143:52:04, 72.10s/it, PSNR=17.61, SPSNR=23.08, SSIM=0.69, LPIPS=0.34]Evaluating:   1%|          | 66/7248 [1:19:20<144:09:08, 72.26s/it, PSNR=17.61, SPSNR=23.08, SSIM=0.69, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.48it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.07it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.23it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.12it/s]
-Evaluating:   1%|          | 66/7248 [1:20:32<144:09:08, 72.26s/it, PSNR=17.58, SPSNR=23.05, SSIM=0.69, LPIPS=0.34]Evaluating:   1%|          | 67/7248 [1:20:32<144:14:56, 72.32s/it, PSNR=17.58, SPSNR=23.05, SSIM=0.69, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.59it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.03it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.36it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.34it/s]
-Evaluating:   1%|          | 67/7248 [1:21:44<144:14:56, 72.32s/it, PSNR=17.55, SPSNR=22.94, SSIM=0.69, LPIPS=0.34]Evaluating:   1%|          | 68/7248 [1:21:44<143:57:27, 72.18s/it, PSNR=17.55, SPSNR=22.94, SSIM=0.69, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.97it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.72it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.24it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.96it/s]
-Evaluating:   1%|          | 68/7248 [1:22:57<143:57:27, 72.18s/it, PSNR=17.52, SPSNR=22.88, SSIM=0.69, LPIPS=0.34]Evaluating:   1%|          | 69/7248 [1:22:57<144:06:47, 72.27s/it, PSNR=17.52, SPSNR=22.88, SSIM=0.69, LPIPS=0.34]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 39.22it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 41.01it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 41.20it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.25it/s]
-Evaluating:   1%|          | 69/7248 [1:24:10<144:06:47, 72.27s/it, PSNR=17.40, SPSNR=22.81, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 70/7248 [1:24:10<144:27:31, 72.45s/it, PSNR=17.40, SPSNR=22.81, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.01it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.89it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.56it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.09it/s]
-Evaluating:   1%|          | 70/7248 [1:25:21<144:27:31, 72.45s/it, PSNR=17.40, SPSNR=22.74, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 71/7248 [1:25:21<144:01:59, 72.25s/it, PSNR=17.40, SPSNR=22.74, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.74it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.80it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.21it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.16it/s]
-Evaluating:   1%|          | 71/7248 [1:26:34<144:01:59, 72.25s/it, PSNR=17.35, SPSNR=22.69, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 72/7248 [1:26:34<144:08:15, 72.31s/it, PSNR=17.35, SPSNR=22.69, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.16it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.00it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 43.11it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 42.81it/s]
-Evaluating:   1%|          | 72/7248 [1:27:47<144:08:15, 72.31s/it, PSNR=17.33, SPSNR=22.69, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 73/7248 [1:27:47<144:21:04, 72.43s/it, PSNR=17.33, SPSNR=22.69, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.03it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 44.05it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.96it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.36it/s]
-Evaluating:   1%|          | 73/7248 [1:28:59<144:21:04, 72.43s/it, PSNR=17.32, SPSNR=22.66, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 74/7248 [1:28:59<144:22:46, 72.45s/it, PSNR=17.32, SPSNR=22.66, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 37.14it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 39.46it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 40.44it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 40.30it/s]
-Evaluating:   1%|          | 74/7248 [1:30:12<144:22:46, 72.45s/it, PSNR=17.29, SPSNR=22.61, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 75/7248 [1:30:12<144:21:48, 72.45s/it, PSNR=17.29, SPSNR=22.61, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 37.57it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 41.64it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 43.55it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.01it/s]
-Evaluating:   1%|          | 75/7248 [1:31:23<144:21:48, 72.45s/it, PSNR=17.29, SPSNR=22.54, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 76/7248 [1:31:23<143:58:46, 72.27s/it, PSNR=17.29, SPSNR=22.54, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 42.92it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 34.44it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 37.17it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 37.23it/s]
-Evaluating:   1%|          | 76/7248 [1:32:36<143:58:46, 72.27s/it, PSNR=17.27, SPSNR=22.54, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 77/7248 [1:32:36<144:11:58, 72.39s/it, PSNR=17.27, SPSNR=22.54, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.39it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 42.26it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 41.88it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.86it/s]
-Evaluating:   1%|          | 77/7248 [1:33:49<144:11:58, 72.39s/it, PSNR=17.23, SPSNR=22.57, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 78/7248 [1:33:49<144:17:27, 72.45s/it, PSNR=17.23, SPSNR=22.57, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 41.14it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 42.65it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 42.02it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.20it/s]
-Evaluating:   1%|          | 78/7248 [1:35:01<144:17:27, 72.45s/it, PSNR=17.22, SPSNR=22.55, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 79/7248 [1:35:01<144:14:04, 72.43s/it, PSNR=17.22, SPSNR=22.55, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 38.46it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 42.42it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 43.97it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 43.44it/s]
-Evaluating:   1%|          | 79/7248 [1:36:14<144:14:04, 72.43s/it, PSNR=17.18, SPSNR=22.49, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 80/7248 [1:36:14<144:19:46, 72.49s/it, PSNR=17.18, SPSNR=22.49, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  25%|██▌       | 4/16 [00:00<00:00, 37.83it/s][A
-frame loading (JPEG):  56%|█████▋    | 9/16 [00:00<00:00, 40.72it/s][A
-frame loading (JPEG):  88%|████████▊ | 14/16 [00:00<00:00, 41.83it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 41.53it/s]
-Evaluating:   1%|          | 80/7248 [1:37:26<144:19:46, 72.49s/it, PSNR=17.24, SPSNR=22.49, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 81/7248 [1:37:26<144:11:36, 72.43s/it, PSNR=17.24, SPSNR=22.49, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 43.56it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 43.97it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 44.61it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 44.43it/s]
-Evaluating:   1%|          | 81/7248 [1:38:38<144:11:36, 72.43s/it, PSNR=17.20, SPSNR=22.39, SSIM=0.69, LPIPS=0.35]Evaluating:   1%|          | 82/7248 [1:38:38<143:48:30, 72.25s/it, PSNR=17.20, SPSNR=22.39, SSIM=0.69, LPIPS=0.35]
-frame loading (JPEG):   0%|          | 0/16 [00:00<?, ?it/s][A
-frame loading (JPEG):  31%|███▏      | 5/16 [00:00<00:00, 45.15it/s][A
-frame loading (JPEG):  62%|██████▎   | 10/16 [00:00<00:00, 45.54it/s][A
-frame loading (JPEG):  94%|█████████▍| 15/16 [00:00<00:00, 45.56it/s][Aframe loading (JPEG): 100%|██████████| 16/16 [00:00<00:00, 45.48it/s]
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00, 28.58it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  7.08it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  7.97it/s]
+Evaluating:   0%|          | 0/7248 [00:00<?, ?it/s]Evaluating:   0%|          | 0/7248 [01:54<?, ?it/s, PSNR=11.18, SPSNR=12.19, SSIM=0.58, LPIPS=0.53]Evaluating:   0%|          | 1/7248 [01:54<231:03:24, 114.78s/it, PSNR=11.18, SPSNR=12.19, SSIM=0.58, LPIPS=0.53]Evaluating:   0%|          | 1/7248 [03:44<231:03:24, 114.78s/it, PSNR=11.60, SPSNR=12.23, SSIM=0.58, LPIPS=0.51]Evaluating:   0%|          | 2/7248 [03:44<224:49:35, 111.70s/it, PSNR=11.60, SPSNR=12.23, SSIM=0.58, LPIPS=0.51]Evaluating:   0%|          | 2/7248 [05:25<224:49:35, 111.70s/it, PSNR=12.64, SPSNR=13.27, SSIM=0.58, LPIPS=0.51]Evaluating:   0%|          | 3/7248 [05:25<215:19:45, 107.00s/it, PSNR=12.64, SPSNR=13.27, SSIM=0.58, LPIPS=0.51]Evaluating:   0%|          | 3/7248 [07:14<215:19:45, 107.00s/it, PSNR=13.33, SPSNR=14.20, SSIM=0.60, LPIPS=0.50]Evaluating:   0%|          | 4/7248 [07:14<216:26:31, 107.56s/it, PSNR=13.33, SPSNR=14.20, SSIM=0.60, LPIPS=0.50]Evaluating:   0%|          | 4/7248 [08:52<216:26:31, 107.56s/it, PSNR=13.62, SPSNR=14.37, SSIM=0.60, LPIPS=0.49]Evaluating:   0%|          | 5/7248 [08:52<209:56:23, 104.35s/it, PSNR=13.62, SPSNR=14.37, SSIM=0.60, LPIPS=0.49]Evaluating:   0%|          | 5/7248 [10:47<209:56:23, 104.35s/it, PSNR=14.03, SPSNR=14.85, SSIM=0.60, LPIPS=0.49]Evaluating:   0%|          | 6/7248 [10:47<216:40:13, 107.71s/it, PSNR=14.03, SPSNR=14.85, SSIM=0.60, LPIPS=0.49]Evaluating:   0%|          | 6/7248 [12:37<216:40:13, 107.71s/it, PSNR=14.18, SPSNR=15.14, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 7/7248 [12:37<218:36:22, 108.68s/it, PSNR=14.18, SPSNR=15.14, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 7/7248 [14:13<218:36:22, 108.68s/it, PSNR=14.24, SPSNR=15.13, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 8/7248 [14:13<210:15:25, 104.55s/it, PSNR=14.24, SPSNR=15.13, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 8/7248 [15:56<210:15:25, 104.55s/it, PSNR=14.21, SPSNR=15.05, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 9/7248 [15:56<209:01:59, 103.95s/it, PSNR=14.21, SPSNR=15.05, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 9/7248 [17:41<209:01:59, 103.95s/it, PSNR=14.09, SPSNR=15.23, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 10/7248 [17:41<209:41:23, 104.29s/it, PSNR=14.09, SPSNR=15.23, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 10/7248 [19:21<209:41:23, 104.29s/it, PSNR=14.16, SPSNR=15.34, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 11/7248 [19:21<207:00:00, 102.97s/it, PSNR=14.16, SPSNR=15.34, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 11/7248 [21:04<207:00:00, 102.97s/it, PSNR=14.47, SPSNR=15.75, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 12/7248 [21:04<207:23:30, 103.18s/it, PSNR=14.47, SPSNR=15.75, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 12/7248 [22:52<207:23:30, 103.18s/it, PSNR=14.52, SPSNR=15.78, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 13/7248 [22:52<210:26:24, 104.71s/it, PSNR=14.52, SPSNR=15.78, SSIM=0.61, LPIPS=0.48]Evaluating:   0%|          | 13/7248 [24:34<210:26:24, 104.71s/it, PSNR=14.80, SPSNR=16.24, SSIM=0.61, LPIPS=0.47]Evaluating:   0%|          | 14/7248 [24:34<208:34:09, 103.79s/it, PSNR=14.80, SPSNR=16.24, SSIM=0.61, LPIPS=0.47]Evaluating:   0%|          | 14/7248 [26:21<208:34:09, 103.79s/it, PSNR=14.78, SPSNR=16.17, SSIM=0.61, LPIPS=0.47]Evaluating:   0%|          | 15/7248 [26:21<210:29:06, 104.76s/it, PSNR=14.78, SPSNR=16.17, SSIM=0.61, LPIPS=0.47]Evaluating:   0%|          | 15/7248 [28:12<210:29:06, 104.76s/it, PSNR=14.77, SPSNR=16.52, SSIM=0.61, LPIPS=0.47]Evaluating:   0%|          | 16/7248 [28:12<213:51:31, 106.46s/it, PSNR=14.77, SPSNR=16.52, SSIM=0.61, LPIPS=0.47]

@@ -144,10 +144,10 @@ if __name__ == "__main__":
     parser.add_argument("--checkpoint", type=str, default=None)
     parser.add_argument("--output_dir", type=str, default='./output/')
     parser.add_argument("--batch_size", type=int, default=1)
-    parser.add_argument("--dataset_path", type=str, default="/media/HDD1/hejun/LavalObjaverseDataset")
+    parser.add_argument("--dataset_path", type=str, default="/media/HDD2/hejun/LavalObjaverseDataset")
     parser.add_argument("--baseline", type=str, default="LightSwitch")
     parser.add_argument("--skip_exist", action='store_true')
-    parser.add_argument("--pair_info", type=str, default='/media/HDD1/hejun/LavalObjaverseDataset/experimental_pair/1_to_1_mapping_pairs.json')
+    parser.add_argument("--pair_info", type=str, default='/media/HDD2/hejun/LavalObjaverseDataset/experimental_pair/1_to_1_mapping_pairs.json')
 
     args = parser.parse_args()
     
