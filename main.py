@@ -92,6 +92,10 @@ def log_validation(dataloader, pipeline, args, metric_fn):
                 
                 img_path = view_dir / "pred_relight.png"
                 save_image(outputs[b, v], img_path)
+                if args.save_gt:
+                    save_image(filtered_batch["target_images"][b, v], view_dir / "gt.png")
+                if args.save_ref:
+                    save_image(filtered_batch["source_images"][b, v], view_dir / "ref.png")
                 current_eval["pred_image"].append(str(img_path))
 
             evaluation_results["data_pair"][str(sample_idx)] = current_eval
@@ -123,6 +127,8 @@ def main(args):
     elif args.baseline == "NeuralGaffer":
         from pipeline.NeuralGaffer import NeuralGafferPipeline
         pipeline = NeuralGafferPipeline()
+        dataset = EvalDataset(args.dataset_path, args.pair_info, black_background=True)
+
     elif args.baseline == "Trained-NeuralGaffer":
         from pipeline.NeuralGaffer import NeuralGafferPipeline
         raise NotImplementedError(f"Baseline {args.baseline} not supported.")
@@ -131,7 +137,7 @@ def main(args):
         raise NotImplementedError(f"Baseline {args.baseline} not supported.")
     
     # Dataset Setup
-    dataset = EvalDataset(args.dataset_path, args.pair_info)
+    # dataset = EvalDataset(args.dataset_path, args.pair_info)
     dataloader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False, num_workers=4)
 
     metric_fn = MetricCalculator(device)
@@ -148,6 +154,8 @@ if __name__ == "__main__":
     parser.add_argument("--baseline", type=str, default="LightSwitch")
     parser.add_argument("--skip_exist", action='store_true')
     parser.add_argument("--pair_info", type=str, default='/media/HDD1/hejun/LavalObjaverseDataset/experimental_pair/1_to_1_mapping_pairs.json')
+    parser.add_argument("--save_gt", action='store_true')
+    parser.add_argument("--save_ref", action='store_true')
 
     args = parser.parse_args()
     
@@ -159,3 +167,9 @@ if __name__ == "__main__":
     os.makedirs(args.output_dir, exist_ok=True)
     
     main(args)
+
+'''
+dataset_path : /media/HDD1/hejun/LavalObjaverseDataset on 0823
+dataset_path : /media/HDD1/hejun/LavalObjaverseDataset on 0422
+
+'''
