@@ -20,4 +20,4 @@ cc_projection/diffusion_pytorch_model.safetensors not found
 The config attributes {'cc_projection': ['pipeline_zero1to3', 'CCProjection']} were passed to Neural_Gaffer_StableDiffusionPipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
 Keyword arguments {'cc_projection': ['pipeline_zero1to3', 'CCProjection']} are not expected by Neural_Gaffer_StableDiffusionPipeline and will be ignored.
 ✅ Loading checkpoint with Accelerator: Neural_Gaffer/neural_gaffer_res256/checkpoint-80000
-Evaluating:   0%|          | 0/7248 [00:00<?, ?it/s]Evaluating:   0%|          | 0/7248 [00:44<?, ?it/s, PSNR=21.91, SPSNR=26.35, SSIM=0.65, LPIPS=0.20]Evaluating:   0%|          | 1/7248 [00:44<90:06:45, 44.76s/it, PSNR=21.91, SPSNR=26.35, SSIM=0.65, LPIPS=0.20]Evaluating:   0%|          | 1/7248 [01:18<90:06:45, 44.76s/it, PSNR=22.03, SPSNR=25.79, SSIM=0.67, LPIPS=0.20]Evaluating:   0%|          | 2/7248 [01:18<76:43:45, 38.12s/it, PSNR=22.03, SPSNR=25.79, SSIM=0.67, LPIPS=0.20]
+Evaluating:   0%|          | 0/7248 [00:00<?, ?it/s]

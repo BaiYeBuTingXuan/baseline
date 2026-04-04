@@ -160,6 +160,7 @@ class NeuralGafferPipeline(BaselinePipeline):
             # 4. Append the list of PIL images to the main list
             output.extend(chunk_result.images)
         output = pil_list_to_tensor(output).to(device=self.device, dtype=self.dtype)
+        output = output * mask
         output = output.reshape(batch_size, -1, 3, h, w)
         return output
 
@@ -168,7 +169,7 @@ class NeuralGafferPipeline(BaselinePipeline):
         Processes the raw batch into a flattened BF (Batch*Frames) format
         ready for the Specific Pipeline.
         """
-        return _batch_preprocess(batch, sam=self.sam)
+        return _batch_preprocess(batch)
 
 def pil_list_to_tensor(pil_list: list, B: int = None, F: int = None) -> torch.Tensor:
     """
