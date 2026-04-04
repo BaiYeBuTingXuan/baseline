@@ -12,12 +12,9 @@ from accelerate import Accelerator
 from pipeline import BaselinePipeline
 from Neural_Gaffer.pipeline_neural_gaffer import Neural_Gaffer_StableDiffusionPipeline
 import numpy as np
-<<<<<<< HEAD
-=======
 
 from .segment import segment_images, sam_init
 from .utils import rotate_lighting
->>>>>>> main
 config = Namespace(
     guidance_scale=3.0,
     seed=42,
@@ -121,25 +118,6 @@ class NeuralGafferPipeline(BaselinePipeline):
         batch_size = batch["source_images"].size()[0]
         batch = self.batch_preprocess(batch)
         
-<<<<<<< HEAD
-        input_image = batch["image_cond"].to(dtype=self.dtype)
-        bf, _, h, w = input_image.shape
-        target_envmap_ldr = batch["envir_map_target_ldr"].to(dtype=self.dtype)
-        target_envmap_hdr = batch["envir_map_target_hdr"].to(dtype=self.dtype)
-        generartor_list = [torch.Generator(device=self.device).manual_seed(config.seed) for _ in range(bf)]
-        with torch.autocast("cuda"):
-            # todo: change the name of "cond_envir_map" to "target_envmap_hdr"
-            output = self.pipeline(input_imgs=input_image, prompt_imgs=input_image, 
-                            first_target_envir_map=target_envmap_hdr, 
-                            second_target_envir_map=target_envmap_ldr, 
-                            poses=None, 
-                            height=h, width=w,
-                            guidance_scale=config.guidance_scale, 
-                            num_inference_steps=50, 
-                            generator=generartor_list, 
-                            output_type='np').images
-        output = pil_list_to_tensor(output)
-=======
         input_image = batch["image_cond"].to(device=self.device, dtype=self.dtype, non_blocking=True)
         mask = batch["mask"].to(device=self.device, dtype=self.dtype, non_blocking=True)
         input_image = input_image * mask + bg * (1.0 - mask)
@@ -183,7 +161,6 @@ class NeuralGafferPipeline(BaselinePipeline):
             output.extend(chunk_result.images)
         output = pil_list_to_tensor(output).to(device=self.device, dtype=self.dtype)
         output = output * mask
->>>>>>> main
         output = output.reshape(batch_size, -1, 3, h, w)
     
 
@@ -195,8 +172,6 @@ class NeuralGafferPipeline(BaselinePipeline):
         ready for the Specific Pipeline.
         """
         return _batch_preprocess(batch)
-<<<<<<< HEAD
-        
 
 def pil_list_to_tensor(pil_list: list, B: int = None, F: int = None) -> torch.Tensor:
     """
@@ -264,9 +239,6 @@ def _batch_preprocess(batch):
     }
     return processed_batch
 
-def rotate_lighting(lighting, RT):
-=======
-
 def pil_list_to_tensor(pil_list: list, B: int = None, F: int = None) -> torch.Tensor:
     """
     Convert a list of PIL Images to a PyTorch tensor in [0, 1] range.
@@ -331,32 +303,6 @@ def _batch_preprocess(batch, **kwargs):
     ldr = 2.0 * ldr - 1.0
     hdr = 2.0 * hdr - 1.0
     
-<<<<<<< HEAD
-    # [H, W, 3] -> [B, N, 3]
-    world_dirs = torch.stack([x, y, z], dim=-1).view(1, -1, 3).expand(B, -1, -1)
-
-    # 4. Rotate: New_Dir = R_w2c @ World_Dir
-    rotated_dirs = torch.bmm(world_dirs, R_w2c) # [B, N, 3]
-    
-    # 5. Convert back to your theta/phi space
-    # theta = arcsin(z)
-    # phi = atan2(y, x)
-    rx, ry, rz = rotated_dirs[..., 0], rotated_dirs[..., 1], rotated_dirs[..., 2]
-    
-    r_theta = torch.asin(rz.clamp(-1, 1))
-    r_phi = torch.atan2(ry, rx)
-
-    # 6. Normalize to [-1, 1] for grid_sample
-    # Map theta [pi/2, -pi/2] -> [-1, 1]
-    grid_v = - (r_theta / (torch.pi / 2)) 
-    # Map phi [pi, -pi] -> [-1, 1]
-    grid_u = r_phi / torch.pi
-
-    grid = torch.stack([grid_u, grid_v], dim=-1).view(B, H, W, 2)
-
-    # 7. Sample original map
-    return torch.nn.functional.grid_sample(lighting, grid, mode='bilinear', padding_mode='reflection', align_corners=True)
-=======
     processed_batch = {
         "image_cond": reference_image,
         "envir_map_target_ldr": ldr,
@@ -364,8 +310,6 @@ def _batch_preprocess(batch, **kwargs):
         "mask": mask,
     }
     return processed_batch
->>>>>>> main
-
 
 def tunemap(lighting):
     """
