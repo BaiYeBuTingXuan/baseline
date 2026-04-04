@@ -2,14 +2,15 @@ import torch
 import numpy as np
 from PIL import Image
 from contextlib import nullcontext
-
+from pipeline import BaselinePipeline
 from diffusion_renderer.inference_svd_rgbx import *
 from diffusion_renderer.inference_svd_xrgb import *
 
 
-class DiffusionRendererPipeline:
+class DiffusionRendererPipeline(BaselinePipeline):
     def __init__(self, device='cuda', inverse_config=None, forward_config=None):
         # --- Default Inverse Configuration ---
+        super(BaselinePipeline).__init__()
         self.inverse_config = {
             "inference_model_weights": './checkpoints/diffusion_renderer-inverse-svd',
             "inference_res": [512, 512],

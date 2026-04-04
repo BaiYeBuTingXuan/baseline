@@ -5,6 +5,7 @@ from tqdm import tqdm
 from torchvision import transforms as T
 import tempfile
 import PIL.Image
+from pipeline import BaselinePipeline
 
 from LightSwitch.produce_gs_relightings import *
 from LightSwitch.dataset_colmap import *
@@ -16,9 +17,9 @@ env_transform = transforms.Compose([
         transforms.Normalize([0.5], [0.5]),
     ])
 
-class LightSwitchPipeline:
+class LightSwitchPipeline(BaselinePipeline):
     def __init__(self, device='cuda'):
-        # --- Default Arguments (equivalent to your argparse setup) ---
+        super(BaselinePipeline).__init__()
         self.config = {
             "pretrained_model": "thebluser/lightswitch",
             "pretrained_model_sm": "thebluser/stable-material-mv",
@@ -296,6 +297,7 @@ class LightSwitchPipeline:
         # Note that mask is not the input!
         res["mask"] = segment_tensor(self.sam, batch["source_images"]).to(self.device, dtype=self.weight_dtype).flatten(0, 1)
         res["image"] = batch["source_images"].to(self.device, dtype=self.weight_dtype).flatten(0, 1)
+        res["image"] = 2.0 * res["image"] - 1.0
         
         # 2. Camera & Pose Extraction (NumPy for trig/math)
         T_c2w_np = blender_to_colmap(batch["source_view"].cpu().float().numpy())
@@ -342,7 +344,7 @@ class LightSwitchPipeline:
         darker = (np.log10(envmap_np + 1) / np.log10(max_val + 1)).clip(0, 1)
         brighter = hlg_oetf(darker).clip(0, 1)
         darker = env_transform(np.transpose(darker[0], (1, 2, 0)))
-        brighter = env_transform(np.transpose(brighter[0], (1, 2, 0)))
+        brighter = env_transform(np.transpose(brighter[0], (1, 2, 0))) # has bbeen shift to [-1, 1] via env_transform
 
         res["envs_darker"] = darker.unsqueeze(0).repeat(total_elements, 1, 1, 1).to(self.device, dtype=self.weight_dtype)
         res["envs_brighter"] = brighter.unsqueeze(0).repeat(total_elements, 1, 1, 1).to(self.device, dtype=self.weight_dtype)

@@ -1,25 +1,14 @@
-from torch.utils.data import Dataset
-from pathlib import Path
-from PIL import Image
 import numpy as np
 import os
 import json
-import torchvision.transforms as transforms
 import kiui
 import torch
 import torch.nn.functional as F
 import glob
-from itertools import combinations, product
-from torchvision.transforms import v2
 from .utils import *
-import OpenEXR, Imath, random
+import OpenEXR, Imath
 import math
 
-try:
-    from scipy.spatial.transform import Rotation
-except ImportError:
-    raise ImportError("scipy is required for this function. Install with: pip install scipy")
-    
 
 PI = 3.1415926535
 INFO_BUFFER = "dataset/buffer"
