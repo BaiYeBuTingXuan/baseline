@@ -5,7 +5,11 @@ from torchvision.utils import save_image
 DEBUG_DIR = "debug_tensors"
 os.makedirs(DEBUG_DIR, exist_ok=True)
 
+<<<<<<< HEAD
 def save_debug(tensor: torch.Tensor, filename: str, max_batches: int = 2):
+=======
+def save_debug(tensor: torch.Tensor, filename: str = "debug.png", max_batches: int = 2):
+>>>>>>> main
     """
     Universal saver for 4D [B, C, H, W] or 5D [B, F, C, H, W] tensors.
     Assumes input range is [-1, 1] and rescales to [0, 1].

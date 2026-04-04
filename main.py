@@ -170,6 +170,10 @@ if __name__ == "__main__":
 
 '''
 dataset_path : /media/HDD1/hejun/LavalObjaverseDataset on 0823
+<<<<<<< HEAD
 dataset_path : /media/HDD1/hejun/LavalObjaverseDataset on 0422
+=======
+dataset_path : /media/HDD2/hejun/LavalObjaverseDataset on 0422
+>>>>>>> main
 
 '''

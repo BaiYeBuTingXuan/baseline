@@ -1,0 +1,23 @@
+/home/hejun/miniconda3/envs/neural-gaffer/lib/python3.11/site-packages/transformers/utils/generic.py:441: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/hejun/miniconda3/envs/neural-gaffer/lib/python3.11/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/hejun/miniconda3/envs/neural-gaffer/lib/python3.11/site-packages/transformers/utils/generic.py:309: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  _torch_pytree._register_pytree_node(
+/home/hejun/miniconda3/envs/neural-gaffer/lib/python3.11/site-packages/numba/np/ufunc/parallel.py:373: NumbaWarning: The TBB threading layer requires TBB version 2021 update 6 or later i.e., TBB_INTERFACE_VERSION >= 12060. Found TBB_INTERFACE_VERSION = 12050. The TBB threading layer is disabled.
+  warnings.warn(problem)
+/home/hejun/miniconda3/envs/neural-gaffer/lib/python3.11/site-packages/accelerate/accelerator.py:477: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = torch.cuda.amp.GradScaler(**kwargs)
+INFO:accelerate.accelerator:Loading states from Neural_Gaffer/neural_gaffer_res256/checkpoint-80000
+INFO:accelerate.checkpointing:All model weights loaded successfully
+INFO:accelerate.checkpointing:All optimizer states loaded successfully
+INFO:accelerate.checkpointing:All scheduler states loaded successfully
+INFO:accelerate.checkpointing:All dataloader sampler states loaded successfully
+INFO:accelerate.checkpointing:GradScaler state loaded successfully
+INFO:accelerate.checkpointing:Could not load random states
+INFO:accelerate.accelerator:Loading in 0 custom states
+cc_projection/diffusion_pytorch_model.safetensors not found
+The config attributes {'cc_projection': ['pipeline_zero1to3', 'CCProjection']} were passed to Neural_Gaffer_StableDiffusionPipeline, but are not expected and will be ignored. Please verify your model_index.json configuration file.
+Keyword arguments {'cc_projection': ['pipeline_zero1to3', 'CCProjection']} are not expected by Neural_Gaffer_StableDiffusionPipeline and will be ignored.
+✅ Loading checkpoint with Accelerator: Neural_Gaffer/neural_gaffer_res256/checkpoint-80000
+Evaluating:   0%|          | 0/7248 [00:00<?, ?it/s]Evaluating:   0%|          | 0/7248 [00:43<?, ?it/s, PSNR=21.91, SPSNR=26.35, SSIM=0.65, LPIPS=0.20]Evaluating:   0%|          | 1/7248 [00:43<86:52:38, 43.16s/it, PSNR=21.91, SPSNR=26.35, SSIM=0.65, LPIPS=0.20]Evaluating:   0%|          | 1/7248 [01:16<86:52:38, 43.16s/it, PSNR=22.03, SPSNR=25.79, SSIM=0.67, LPIPS=0.20]Evaluating:   0%|          | 2/7248 [01:16<75:43:23, 37.62s/it, PSNR=22.03, SPSNR=25.79, SSIM=0.67, LPIPS=0.20]Evaluating:   0%|          | 2/7248 [01:50<75:43:23, 37.62s/it, PSNR=20.06, SPSNR=25.69, SSIM=0.63, LPIPS=0.22]Evaluating:   0%|          | 3/7248 [01:50<72:13:16, 35.89s/it, PSNR=20.06, SPSNR=25.69, SSIM=0.63, LPIPS=0.22]Evaluating:   0%|          | 3/7248 [02:24<72:13:16, 35.89s/it, PSNR=18.72, SPSNR=25.57, SSIM=0.60, LPIPS=0.24]Evaluating:   0%|          | 4/7248 [02:24<70:47:29, 35.18s/it, PSNR=18.72, SPSNR=25.57, SSIM=0.60, LPIPS=0.24]
